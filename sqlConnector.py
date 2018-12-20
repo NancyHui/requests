@@ -43,6 +43,8 @@ sql2 = "select * from book"
 try:
     cursor.execute(sql2)
     results = cursor.fetchall()
+    # results为tuple类型 ((1, 'java', 60, 'kevin'), (2, 'c', 50, 'marry'), (12, 'python', 46, 'Harry'))
+    print(results)
     for row in results:
         id = row[0]
         bookname = row[1]
@@ -50,6 +52,10 @@ try:
         author = row[3]
         print("id=%d, bookname=%s, price=%f, author=%s" % (id, bookname, price, author))
         # print(id, bookname, price, author)
+
+    #  第一行（row）,执行多次则是下一个行
+    result = cursor.fetchone()
+    print(result)
 except :
     print("Error: unable to fetch data")
 
