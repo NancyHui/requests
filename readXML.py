@@ -38,8 +38,9 @@ for child in root:
 print("***************************************************")
 # ********************** ElementTree ************************
 # Find all matching subelements by tag name or path
+# Return list containing all matching elements in document order
 # findall只找到下一级
-for db in tree.findall("datebase"):
+for db in tree.findall("database"):
     db_name = db.get("name")
     print(db_name)
 
@@ -48,7 +49,7 @@ for db in tree.iter("table"):
     db_name = db.get("name")
     print(db_name)
 
-# ****************************************************************
+# **************************** Element *****************************
 # Element
 # class xml.etree.ElementTree.Element(tag, attrib={}, **extra)
 #
@@ -60,6 +61,7 @@ for db in tree.iter("table"):
 # 　　＃针对属性的操作
 # 　　clear()：清空元素的后代、属性、text和tail也设置为None。
 # 　　get(key, default=None)：获取key对应的属性值，如该属性不存在则返回default值。
+#     Get element attribute.Returns a string containing the attribute value, or the default if attribute was not found.
 # 　　items()：根据属性字典返回一个列表，列表元素为(key, value）。
 # 　　keys()：返回包含所有元素属性键的列表。
 # 　　set(key, value)：设置新的属性键与值。
@@ -75,9 +77,8 @@ for db in tree.iter("table"):
 # 　　iterfind(match)：根据tag或path查找所有的后代。
 # 　　itertext()：遍历所有后代并返回text值。
 # 　　remove(subelement)：删除子元素。
-#     get(attrid): Get element attribute.Returns a string containing the attribute value, or the default if attribute was not found.
 
-# *****************************************************************************
+# **************************** ElementTree ***************************************
 # ElementTree
 # class xml.etree.ElementTree.ElementTree(element=None, file=None)
 # 　　element如果给定，则为新的ElementTree的根节点。
