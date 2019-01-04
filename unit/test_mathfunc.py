@@ -1,5 +1,5 @@
 import unittest
-from mathfunc import *
+from unit.mathfunc import *
 
 
 class TestMathFunc(unittest.TestCase):
@@ -48,5 +48,5 @@ class TestMathFunc(unittest.TestCase):
         self.assertEqual(2.5, divide(5, 2))
 
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+# if __name__ == '__main__':
+#     unittest.main(verbosity=2)
