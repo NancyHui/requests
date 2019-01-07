@@ -1,0 +1,21 @@
+test_add (test_math.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (test_math.TestMathFunc)
+Test method divide(a, b) ... ok
+test_minus (test_math.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (test_math.TestMathFunc)
+Test method multi(a, b) ... ok
+test_add (test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... ok
+test_minus (test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK
