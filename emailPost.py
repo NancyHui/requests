@@ -54,7 +54,7 @@ msg['From'] = _format_addr('Python <%s>' % from_addr)
 # msg['To'] = _format_addr('Generator <%s>' % to_addr)
 # # ******* two or more addresses to receive **************
 # https://stackoverflow.com/questions/46992648/smtplib-tuple-object-has-no-attribute-encode
-to_addrs_formate = [_format_addr('Generator <%s>' % to_addrs[0]), _format_addr('Generator <%s>' % to_addrs[1])]
+to_addrs_formate = [_fo8rmat_addr('Generator <%s>' % to_addrs[0]), _format_addr('Generator <%s>' % to_addrs[1])]
 # string 不是list
 msg['To'] = ','.join(to_addrs_formate)
 
@@ -339,3 +339,11 @@ smtp.quit()
 
 # 使用标准的25端口连接SMTP服务器时，使用的是明文传输，发送邮件的整个过程可能会被窃听。
 # 要更安全地发送邮件，可以加密SMTP会话，实际上就是先创建SSL安全连接，然后再使用SMTP协议发送邮件。
+
+# Message
+# +- MIMEBase
+#    +- MIMEMultipart
+#    +- MIMENonMultipart
+#       +- MIMEMessage
+#       +- MIMEText
+#       +- MIMEImage
