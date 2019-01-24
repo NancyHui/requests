@@ -54,6 +54,8 @@ logger.addHandler(handler)
 
 # ***************************** logging *************************************************
 
+logger.error()
+
 # 在logging.basicConfig()函数中可通过具体参数来更改logging模块默认行为，可用参数有
 # filename：用指定的文件名创建FiledHandler（后边会具体讲解handler的概念），这样日志会被存储在指定的文件中。
 # filemode：文件打开方式，在指定了filename时使用这个参数，默认值为“a”还可指定为“w”。
@@ -87,4 +89,7 @@ logger.addHandler(handler)
 # filter提供了细度设备来决定输出哪条日志记录；
 #
 # formatter决定日志记录的最终输出格式。
+
+
+# https://www.cnblogs.com/shapeL/p/9174303.html
 # ***************************** logging *************************************************
